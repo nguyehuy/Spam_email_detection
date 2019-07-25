@@ -16,7 +16,7 @@
 ## 2.Preprocessing Emails (processemail.py):
    Take a look at a sample data:
    
-		```
+		
 		> Anyone knows how much it costs to host a web portal ?
 		>
 		Well, it depends on how many visitors youre expecting. This can be
@@ -25,7 +25,7 @@
 		youre running something big..
 		To unsubscribe yourself from this mailing list, send an email to:
 		groupname-unsubscribe@egroups.com
-		```
+		
 		
    As you cas see, every email contains similar types of entities (numbers, other URLs, or other email addresses)
    and the specific entities (the specific URL or specific dollar amount) will be different in almost every email. So, this specific        entities are not necessary to classify, we need to change and remove them.
@@ -71,14 +71,11 @@
       Remove all the stopwords ('a', 'an', 'is', 'we', 'they'..) becasue it is not neccesary
 	     
 ## 3. Get Vocabulary List (getvocabularylist.py):
-	After processing the email, I have the list of words of every email. In this step, I will choose the vocabulary need to be used in my classifier
-	and which one want to leave out
-	In file getvocabularylist.py , I read all the contetn of the spam emails and choose 20000 words which are have the most occurrent. After that, I used these words to vectorize
-	the data. 
-	You can see this list in the file VocabularyList.txt
+   After processing the email, I have the list of words of every email. In this step, I will choose the vocabulary need to be used in my classifier and which one want to leave out
+   In file getvocabularylist.py , I read all the contetn of the spam emails and choose 20000 words which are have the most occurrent. After that, I used these words to vectorize the data. 
+   You can see this list in the file VocabularyList.txt
 ## 4. Vetorize the data (vetorize.py):
-	In the file vetorize.py, I implemented he feature extraction that converts each email into
-	a vector in 20000 dimensons. That is, xi=1 if the i-th word is in the email and xi = 0 if the i-th word is not present in the email
+   In the file vetorize.py, I implemented he feature extraction that converts each email into a vector in 20000 dimensons. That is, xi=1 if the i-th word is in the email and xi = 0 if the i-th word is not present in the email
 ## 5. Training data (model.py):
 	I wrote file model.py to train the data after we are done above steps. In this steps,first, I used Kfold library to randomly validate trainning data to 
 	determine which algorithsm (svm, RandomForestClassifier, DecisionTreeClassifier, LogisticRegression) is the best. After that, I found LogisticRegression is the best algorithsm
