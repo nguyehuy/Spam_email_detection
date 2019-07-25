@@ -1,5 +1,5 @@
 # Spam_email_detection
- *This is my project to detect spam email
+ * This is my project to detect spam email
  
 # Goal
 	Many email services today provide spam filters that are able to classify emails
