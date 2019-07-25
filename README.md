@@ -27,8 +27,8 @@
 		groupname-unsubscribe@egroups.com
 		```
 		
-    As you cas see, every email contains similar types of entities (numbers, other URLs, or other email addresses)
-    and the specific entities (the specific URL or specific dollar amount) will be different in almost every email. So, this specific       entities are not necessary to classify, we need to change and remove them.
+   As you cas see, every email contains similar types of entities (numbers, other URLs, or other email addresses)
+   and the specific entities (the specific URL or specific dollar amount) will be different in almost every email. So, this specific        entities are not necessary to classify, we need to change and remove them.
     
     In file processemail.py, I have implemented the folowing steps to preprocess email:
     
