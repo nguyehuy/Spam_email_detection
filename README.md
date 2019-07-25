@@ -30,45 +30,45 @@
    As you cas see, every email contains similar types of entities (numbers, other URLs, or other email addresses)
    and the specific entities (the specific URL or specific dollar amount) will be different in almost every email. So, this specific        entities are not necessary to classify, we need to change and remove them.
     
-    In file processemail.py, I have implemented the folowing steps to preprocess email:
+   In file processemail.py, I have implemented the folowing steps to preprocess email:
     
-	* Remove header:
+   * Remove header:
 	
-	     Every email has a header, we need to remove the header
+      Every email has a header, we need to remove the header
 	     
-	* Lower-casing:
+   * Lower-casing:
 	
-	     The email is conveted into lower case, so thar the captialization is ignored
+      The email is conveted into lower case, so thar the captialization is ignored
 	     
-	* Stripping HTML tags:
+   * Stripping HTML tags:
 	
-	     Removing the HTML tags in emai
+      Removing the HTML tags in emai
 	     
-	* Normalizing email :
+   * Normalizing email :
 	
-	     All URLs are replace with the text 'httpaddr'
+      All URLs are replace with the text 'httpaddr'
 	     
-	     All email addresses are replace with the text 'emailaddr'
+      All email addresses are replace with the text 'emailaddr'
 	     
-	     All numbers are replace with the text 'number'
+      All numbers are replace with the text 'number'
 	     
-	     All '$' are replace with the text 'dollar'
+      All '$' are replace with the text 'dollar'
 	     
-	* Stemming Word:
+   * Stemming Word:
 	
-	     Reduce the word to their stemmed form. For example, "discount", "discounts", "discounted" and "discounting" 
+      Reduce the word to their stemmed form. For example, "discount", "discounts", "discounted" and "discounting" 
 	     
-	     are all replaced with "discount"
+      are all replaced with "discount"
 	     
-	* Strip Punctuation:
+   * Strip Punctuation:
 	
-	     Remove all non-words (punctuation). All white spaces (tabs, spaces, newlines) have been 
+      Remove all non-words (punctuation). All white spaces (tabs, spaces, newlines) have been 
 	     
-	     trimmed to a single space character
+      trimmed to a single space character
 	     
-	* Remove stopwords: 
+   * Remove stopwords: 
 	
-	     Remove all the stopwords ('a', 'an', 'is', 'we', 'they'..) becasue it is not neccesary
+      Remove all the stopwords ('a', 'an', 'is', 'we', 'they'..) becasue it is not neccesary
 	     
 ## 3. Get Vocabulary List (getvocabularylist.py):
 	After processing the email, I have the list of words of every email. In this step, I will choose the vocabulary need to be used in my classifier
