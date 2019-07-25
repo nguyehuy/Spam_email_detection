@@ -77,15 +77,12 @@
 ## 4. Vetorize the data (vetorize.py):
    In the file vetorize.py, I implemented he feature extraction that converts each email into a vector in 20000 dimensons. That is, xi=1 if the i-th word is in the email and xi = 0 if the i-th word is not present in the email
 ## 5. Training data (model.py):
-	I wrote file model.py to train the data after we are done above steps. In this steps,first, I used Kfold library to randomly validate trainning data to 
-	determine which algorithsm (svm, RandomForestClassifier, DecisionTreeClassifier, LogisticRegression) is the best. After that, I found LogisticRegression is the best algorithsm
-	(you can uncomment the code to see that)
-	Then, I used the GridSearch to find out the best parameter for my model
+   I wrote file model.py to train the data after we are done above steps. In this steps,first, I used Kfold library to randomly validate trainning data to determine which algorithsm (svm, RandomForestClassifier, DecisionTreeClassifier, LogisticRegression) is the best. After that, I found LogisticRegression is the best algorithsm (you can uncomment the code to see that)
+   Then, I used the GridSearch to find out the best parameter for my model
 ## 6.Main (main.py)
-	In the main.py, I called all the class that I aready created to run my project. After that, I tested the accuracy. I got 0.994 accuracy in the test set with the parameter:
-	L='l2' and C=100
+   In the main.py, I called all the class that I aready created to run my project. After that, I tested the accuracy. I got 0.994 accuracy in the test set with the parameter: L='l2' and C=100
 ## 7. Vocabulary (VocabularyList.txt):
-	This file contains all the vocabularies that I have got in step 3.
+   This file contains all the vocabularies that I have got in step 3.
 	
 # Contact Infomation 
   * Name:  Huy Nguyen
